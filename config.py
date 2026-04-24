@@ -4,7 +4,7 @@ WORKING_DIR = "."
 
 block_height = -45
 
-default_port="COM8"
+default_port="COM4"
 
 
 # TODO: This section needs to be updated with your calibration
@@ -14,15 +14,15 @@ M = np.array([
     [-4.58721299e-01,  3.58521982e-04,  1.36198619e+02]
 ], dtype=np.float64)
 
-M[0, 2] -= 35.0  # shift +/-X
-M[1, 2] += 8.0  # shift +/- y
+M[0, 2] += 20.0  # shift +/-X
+M[1, 2] += 12.0  # shift +/- y
 
 z_above = 100           # safe travel height (e.g. 100)
-z_table = -45           # Z at table contact
-block_height_mm = 40   # block physical thickness
+z_table = -60           # Z at table contact
+block_height_mm = 10   # block physical thickness
 block_length_mm = 20   # block physical length
-stack_delta_mm = 10    # extra height when stacking (to avoid collision)
+stack_delta_mm = 2    # extra height when stacking (to avoid collision)
 side_offset_mm = 10    # extra XY gap when placing beside
 
 capture_wait_time = 10
-camera_index = 1
+camera_index = 0

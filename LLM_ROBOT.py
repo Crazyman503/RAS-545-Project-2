@@ -134,7 +134,7 @@ def main():
         # ================= ASK FOR NEXT USER INPUT =================
         print("\n================ AWAITING USER INPUT (type 'quit' to exit) ================\n")
         user_text = input("You: ").strip()
-
+        move_to_home()
         if user_text.lower() in {"quit", "exit", "q"}:
             print("Closing robot connection before exit...")
             try:
